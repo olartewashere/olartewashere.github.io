@@ -1,5 +1,5 @@
 --------
-title: League Of Legengs
+title: League Of Legends
 --------
 
 #San Mateo
