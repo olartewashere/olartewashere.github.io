@@ -1,4 +1,0 @@
-User-agent: *
-Disallow: 
-
-Sitemap: http://olartewashere.github.io/sitemap.xml 
