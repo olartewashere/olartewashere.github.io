@@ -1,7 +1,7 @@
 ---
 published: true
 title: lol
-layout: single
+layout: home
 ---
 # League of Legends
 
