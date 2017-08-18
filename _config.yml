@@ -6,7 +6,7 @@
 # `jekyll serve`. If you change this file, please restart the server process.
 
 # Site Settings
-theme: minimal-mistakes-jekyll
+theme: minima
 locale                   : "es-MX"
 title                    : "Olarte Was Here"
 title_separator          : "-"
@@ -90,7 +90,7 @@ author:
   flickr           :
   facebook         : "OLARTEWASHERE"
   foursquare       :
-  github           :
+  github           : "olartewashere"
   gitlab           :
   google_plus      :
   keybase          :
