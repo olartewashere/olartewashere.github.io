@@ -1,7 +1,9 @@
 ---
 published: true
 title: lol
-layout: home
+layout: single
+permalink: /lol
+author_profile: true
 ---
 # League of Legends
 
