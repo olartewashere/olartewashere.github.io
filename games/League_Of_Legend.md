@@ -2,7 +2,7 @@
 published: true
 title: League Of Legends
 layout: default
-permalink: /League-Of-Legends/
+permalink: /games/League-Of-Legends/
 author_profile: true
 ---
 
