@@ -1,5 +1,6 @@
 ---
 published: true
+title: lol
 ---
 # League of Legends
 
