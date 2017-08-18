@@ -1,6 +1,7 @@
 ---
 published: true
 title: League Of Legends
+layout: default
 ---
 
 #San Mateo

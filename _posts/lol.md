@@ -1,6 +1,7 @@
 ---
 published: true
 title: lol
+layout: single
 ---
 # League of Legends
 
