@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+   <head>
+    <title>test</title>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link type="text/css" rel="stylesheet" href="./css/local/dtt/design.css">
+      <link rel="stylesheet" href="http://jcrop-cdn.tapmodo.com/v0.9.12/css/jquery.Jcrop.css" type="text/css" />
+      <script src="./js/external/dtt/jquery-1.11.1.min.js"></script>
+      <script src="./js/external_modified/dtt/jcanvas.js"></script>
+      <script src="./js/external/dtt/jquery.Jcrop.js"></script>
+      <script src="./js/local/dtt/DrawGraphics.js"></script>
+      <script src="./js/local/dtt/controllercanvas.js"></script>
+<!--
+<script type="text/javascript" src="./js/tipped/tipped.js"></script>
+<link rel="stylesheet" type="text/css" href="./css/tipped/tipped.css"/>
+-->
+   </head>
+   <body id="idBodyDTT">
+   <div id="logTooltip">Information:  </div><br>
+   <span id="demo-tooltip">&nbsp;</span>
+   <div id="FloatButtons">
+    <div id="funciones" >
+         <button id="buttonHelp" type='submit' onclick="new function(){window.open('http://regulondb.ccg.unam.mx/search/jsp/Object_Code_Guiede.html', 'RegulonDB  - Online Help','width=600,height=600,menubar=no,resizable,scrollbars')}" class='imgButton' style="background-image: url('./images/dtt/help.png')" title="Graphic code for objects and colors" ></button>
+         <button id="buttonScreen" type='submit' onclick="preview()" class="imgButton" style="background-image: url('./images/dtt/captura.png')" title="Screen"></button>
+         <a id="download" download='image.png' ><button class="imgButton" style="background-image: url('./images/dtt/save.png')" title="Save" ></button></a>
+         <button id="home" type='submit' onclick="restore()" class="imgButton" style="background-image: url('./images/dtt/home.png')" title="Reset axes"></button>
+         <button id="buttonZoomin" type='submit' onclick="plus()" class="imgButton" style="background-image: url(./images/dtt/plus.png)" title="Zoom in" > </button>
+         <button id="buttonZoomout" type='submit' onclick="minus()" class="imgButton" style="background-image: url(./images/dtt/less.png)" title="Zoom out"></button>
+         <button id="buttonCrop" type='submit' onclick="crop()" style="background-image: url(./images/dtt/expand.png)"  title="Crop" class="imgButton"   >
+         <button id="cut" type='submit' onclick="cortado()" style="background-image: url(./images/dtt/tick.png);display:none" title="tick" class="imgButton"></button>
+         <button id="release" type='submit' onclick="restore();" style="background-image: url(./images/dtt/cancel.png);display:none" title="cancel" class="imgButton"   >
+        </div>
+  <div id="myControls">
+  </div>
+  </div> <br>
+      <div id="drawingZone">
+       <div id="mycanvasContainer">
+      <canvas id="myCanvas" width=1479 height=447 style="border:solid 1px black;">
+        Your browser doesn't support the HTML5 CANVAS
+      </canvas>
+      </div>
+        <div id="jcropArea">
+      <center>
+        <canvas id="canvasCrop" width=1479 height=447 style="display:none;border:solid 1px black">
+          Your browser doesn't support the HTML5 CANVAS
+        </canvas>
+        </center>
+      </div>
+     </div>
+       <script type="text/javascript">
+       function setValues(){
+        widthCanvas=1479;
+        heightCanvas=447;
+           nameFile = "test";
+       }
+       function paintAll(){
+
+  WaterMark();
+drawTFBingdingSite(234,229,229,1286,210,28,21,"CpxR","Information: <i><b> TFBingdingSite: CpxR </i></b>  at -351&rarr;ompCp1<strong>Function:&nbsp;</strong> activator",'TFBindingSite','#',1.0,0);
+drawString("CpxR",1300,220,"CpxR",'TFBindingSite',10,'Helvetica');
+drawTFBingdingSite(255,28,0,1264,107,28,21,"Lrp","Information: <i><b> TFBingdingSite: Lrp </i></b>  at 87.5&rarr;micFp at -283.5&rarr;ompCp3 at -306.5&rarr;ompCp2 at -340.5&rarr;ompCp1<strong>Function:&nbsp;</strong> repressor",'TFBindingSite','#',1.0,0);
+drawString("Lrp",1278,117,"Lrp",'TFBindingSite',10,'Helvetica');
+drawTFBingdingSite(255,28,0,1206,107,28,21,"Lrp","Information: <i><b> TFBingdingSite: Lrp </i></b>  at 58.5&rarr;micFp at -311.5&rarr;ompCp1 at -254.5&rarr;ompCp3 at -277.5&rarr;ompCp2<strong>Function:&nbsp;</strong> repressor",'TFBindingSite','#',1.0,0);
+drawString("Lrp",1220,117,"Lrp",'TFBindingSite',10,'Helvetica');
+drawTFBingdingSite(255,28,0,1162,85,46,21,"AcrR","Information: <i><b> TFBingdingSite: AcrR </i></b>  at 41&rarr;micFp<strong>Function:&nbsp;</strong> repressor",'TFBindingSite','#',1.0,5);
+drawString("AcrR",1185,95,"AcrR",'TFBindingSite',10,'Helvetica');
+drawTFBingdingSite(255,28,0,1144,107,28,21,"Lrp","Information: <i><b> TFBingdingSite: Lrp </i></b>  at 27.5&rarr;micFp at -223.5&rarr;ompCp3 at -280.5&rarr;ompCp1 at -246.5&rarr;ompCp2<strong>Function:&nbsp;</strong> repressor",'TFBindingSite','#',1.0,0);
+drawString("Lrp",1158,117,"Lrp",'TFBindingSite',10,'Helvetica');
+drawTFBingdingSite(19,221,0,1010,143,38,21,"SoxS","Information: <i><b> TFBingdingSite: SoxS </i></b>  at -38.5&rarr;micFp<strong>Function:&nbsp;</strong> activator",'TFBindingSite','#',1.0,0);
+drawString("SoxS",1029,153,"SoxS",'TFBindingSite',10,'Helvetica');
+drawTFBingdingSite(19,221,0,1006,165,38,21,"Rob","Information: <i><b> TFBingdingSite: Rob </i></b>  at -40&rarr;micFp<strong>Function:&nbsp;</strong> activator",'TFBindingSite','#',1.0,0);
+drawString("Rob",1025,175,"Rob",'TFBindingSite',10,'Helvetica');
+drawTFBingdingSite(19,221,0,1006,187,38,21,"MarA","Information: <i><b> TFBingdingSite: MarA </i></b>  at -40&rarr;micFp<strong>Function:&nbsp;</strong> activator",'TFBindingSite','#',1.0,0);
+drawString("MarA",1025,197,"MarA",'TFBindingSite',10,'Helvetica');
+drawTFBingdingSite(234,229,229,1000,209,28,21,"Lrp","Information: <i><b> TFBingdingSite: Lrp </i></b>  at -151&rarr;ompCp3 at -174&rarr;ompCp2<strong>Function:&nbsp;</strong> repressor",'TFBindingSite','#',1.0,0);
+drawString("Lrp",1014,219,"Lrp",'TFBindingSite',10,'Helvetica');
+drawTFBingdingSite(255,28,0,950,188,24,21,"IHF","Information: <i><b> TFBingdingSite: IHF </i></b>  at -182&rarr;ompCp1 at -72&rarr;micFp at -125&rarr;ompCp3<strong>Function:&nbsp;</strong> repressor",'TFBindingSite','#',1.0,0);
+drawString("IHF",962,198,"IHF",'TFBindingSite',10,'Helvetica');
+drawTFBingdingSite(234,229,229,852,210,28,21,"CpxR","Information: <i><b> TFBingdingSite: CpxR </i></b>  at -134&rarr;ompCp1<strong>Function:&nbsp;</strong> activator",'TFBindingSite','#',1.0,0);
+drawString("CpxR",866,220,"CpxR",'TFBindingSite',10,'Helvetica');
+drawTFBingdingSite(19,221,0,848,188,38,21,"SoxS","Information: <i><b> TFBingdingSite: SoxS </i></b>  at -119.5&rarr;micFp<strong>Function:&nbsp;</strong> activator",'TFBindingSite','#',1.0,0);
+drawString("SoxS",867,198,"SoxS",'TFBindingSite',10,'Helvetica');
+drawTFBingdingSite(234,229,229,778,210,20,21,"CpxR","Information: <i><b> TFBingdingSite: CpxR </i></b>  at -95&rarr;ompCp1<strong>Function:&nbsp;</strong> activator",'TFBindingSite','#',1.0,0);
+drawString("CpxR",788,220,"CpxR",'TFBindingSite',10,'Helvetica');
+drawTFBingdingSite(19,221,0,756,188,38,21,"OmpR","Information: <i><b> TFBingdingSite: OmpR </i></b>  at -165.5&rarr;micFp at -88.5&rarr;ompCp1<strong>Function:&nbsp;</strong> activator",'TFBindingSite','#',1.0,0);
+drawString("OmpR",775,198,"OmpR",'TFBindingSite',10,'Helvetica');
+drawTFBingdingSite(19,221,0,714,188,38,21,"OmpR","Information: <i><b> TFBingdingSite: OmpR </i></b>  at -67.5&rarr;ompCp1 at -186.5&rarr;micFp<strong>Function:&nbsp;</strong> activator",'TFBindingSite','#',1.0,0);
+drawString("OmpR",733,198,"OmpR",'TFBindingSite',10,'Helvetica');
+drawTFBingdingSite(234,229,229,712,210,28,21,"YjjQ","Information: <i><b> TFBingdingSite: YjjQ </i></b>  at -64&rarr;ompCp1<strong>Function:&nbsp;</strong> repressor",'TFBindingSite','#',1.0,5);
+drawString("YjjQ",726,220,"YjjQ",'TFBindingSite',10,'Helvetica');
+drawTFBingdingSite(19,221,0,674,188,38,21,"OmpR","Information: <i><b> TFBingdingSite: OmpR </i></b>  at -206.5&rarr;micFp at -47.5&rarr;ompCp1<strong>Function:&nbsp;</strong> activator",'TFBindingSite','#',1.0,0);
+drawString("OmpR",693,198,"OmpR",'TFBindingSite',10,'Helvetica');
+drawTFBingdingSite(234,229,229,644,231,28,21,"Lrp","Information: <i><b> TFBingdingSite: Lrp </i></b>  at 28&rarr;ompCp3<strong>Function:&nbsp;</strong> repressor",'TFBindingSite','#',1.0,0);
+drawString("Lrp",658,241,"Lrp",'TFBindingSite',10,'Helvetica');
+drawTFBingdingSite(234,229,229,642,209,28,21,"Lrp","Information: <i><b> TFBingdingSite: Lrp </i></b>  at 5.5&rarr;ompCp2 at -29.5&rarr;ompCp1<strong>Function:&nbsp;</strong> repressor",'TFBindingSite','#',1.0,0);
+drawString("Lrp",656,219,"Lrp",'TFBindingSite',10,'Helvetica');
+drawTFBingdingSite(234,229,229,582,209,28,21,"Lrp","Information: <i><b> TFBingdingSite: Lrp </i></b>  at 59&rarr;ompCp3 at 36&rarr;ompCp2 at 2&rarr;ompCp1<strong>Function:&nbsp;</strong> repressor",'TFBindingSite','#',1.0,0);
+drawString("Lrp",596,219,"Lrp",'TFBindingSite',10,'Helvetica');
+drawTFBingdingSite(234,229,229,460,231,22,21,"Lrp","Information: <i><b> TFBingdingSite: Lrp </i></b>  at 64.5&rarr;ompCp1<strong>Function:&nbsp;</strong> repressor",'TFBindingSite','#',1.0,0);
+drawString("Lrp",471,241,"Lrp",'TFBindingSite',10,'Helvetica');
+drawTFBingdingSite(234,229,229,456,209,28,21,"Lrp","Information: <i><b> TFBingdingSite: Lrp </i></b>  at 121.5&rarr;ompCp3 at 98.5&rarr;ompCp2<strong>Function:&nbsp;</strong> repressor",'TFBindingSite','#',1.0,0);
+drawString("Lrp",470,219,"Lrp",'TFBindingSite',10,'Helvetica');
+drawTFBingdingSite(234,229,229,414,290,28,21,"Lrp","Information: <i><b> TFBingdingSite: Lrp </i></b>  at 86&rarr;ompCp1 at 120&rarr;ompCp2 at 143&rarr;ompCp3<strong>Function:&nbsp;</strong> repressor",'TFBindingSite','#',1.0,0);
+drawString("Lrp",428,300,"Lrp",'TFBindingSite',10,'Helvetica');
+drawsRNA('MicC',234,229,229,466,357,52,6,"Information:<i> <b>SRNA </b>MicC  at -28&rarr;ompC<strong>Function:&nbsp;</strong>repressor</i>","#",1.0,0,10,'r');
+drawLine(0,0,0,'MicC',466,344,466,358,'SRNA',0);
+drawLine(0,0,0,'MicC',476,344,476,358,'SRNA',0);
+drawLine(0,0,0,'MicC',486,344,486,358,'SRNA',0);
+drawLine(0,0,0,'MicC',496,344,496,358,'SRNA',0);
+drawLine(0,0,0,'MicC',506,344,506,358,'SRNA',0);
+drawLine(0,0,0,'MicC',516,344,516,358,'SRNA',0);
+drawsRNA('RybB',234,229,229,438,320,64,6,"Information:<i> <b>SRNA </b>RybB  at -17&rarr;ompC<strong>Function:&nbsp;</strong>repressor</i>","#",1.0,0,10,'r');
+drawLine(0,0,0,'RybB',438,307,438,321,'SRNA',0);
+drawLine(0,0,0,'RybB',450,307,450,321,'SRNA',0);
+drawLine(0,0,0,'RybB',462,307,462,321,'SRNA',0);
+drawLine(0,0,0,'RybB',474,307,474,321,'SRNA',0);
+drawLine(0,0,0,'RybB',486,307,486,321,'SRNA',0);
+drawLine(0,0,0,'RybB',498,307,498,321,'SRNA',0);
+drawsRNA('RseX',234,229,229,438,283,60,6,"Information:<i> <b>SRNA </b>RseX  at -16&rarr;ompC<strong>Function:&nbsp;</strong>repressor</i>","#",1.0,0,10,'r');
+drawLine(0,0,0,'RseX',438,270,438,284,'SRNA',0);
+drawLine(0,0,0,'RseX',450,270,450,284,'SRNA',0);
+drawLine(0,0,0,'RseX',462,270,462,284,'SRNA',0);
+drawLine(0,0,0,'RseX',474,270,474,284,'SRNA',0);
+drawLine(0,0,0,'RseX',486,270,486,284,'SRNA',0);
+drawLine(0,0,0,'RseX',498,270,498,284,'SRNA',0);
+drawGene(234,229,229,1.0,0,0,0,436,219,126,219,126,209,106,249,126,289,126,279,436,279,0,"ompC",281,254,"Information:<i> <b>Gene </b>ompC <strong>Genome position:</strong> 2309668-2310771</i>","/gene?organism=ECK12&term=ECK120000663&format=jsp&type=gene");
+drawIncomplete(116,209,106,249,114,249,106,289,116,249,108,249,116,209,"ompC",0,'Gene');
+drawGene(208,0,0,5.0,0,0,0,1106,139,1270,139,1270,129,1290,169,1270,209,1270,199,1106,199,0,"micF",1188,174,"Information:<i> <b>Gene </b>micF <strong>Genome position:</strong> 2311106-2311198</i>","/gene?organism=ECK12&term=ECK120002505&format=jsp&type=gene");
+drawBaseLine(106,209,1314,209,0,"arial",4621212,41,209,4622420,1419,209,"Information:<i> <b>DNA </b> 4621212-4622420 </i> ",'#');
+drawTitle('');drawLegend('');$('#myCanvas').saveCanvas();
+}
+       </script>
+   </body>
+</html>
