@@ -82,6 +82,15 @@ $(document).ready(function() {
  fit (1200);
 console.log(navigator.userAgent.toLowerCase());
 //console.log($.browser.msie);
+   theCanvas.addEventListener("touchmove", function(e) {
+            // get the touch element
+            var touch = e.touches[0];
+            x = touch.clientX;
+            y = touch.clientY;
+
+          //  var checkbox = document.elementFromPoint(touch.clientX, touch.clientY);
+        });
+   
 });
 
 /*
